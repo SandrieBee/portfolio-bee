@@ -1,3 +1,5 @@
+import Hero from "../components/layout/Hero";
+
 const sections = [
   "about",
   "skills",
@@ -11,10 +13,7 @@ const sections = [
 export default function HomePage() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <h1 className="text-4xl font-semibold">Home</h1>
-        <p className="mt-3 text-muted">Hero section placeholder.</p>
-      </section>
+      <Hero />
 
       {sections.map((id) => (
         <section
