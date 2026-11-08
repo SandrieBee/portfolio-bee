@@ -1,39 +1,38 @@
-import { Routes, Route, Link } from "react-router";
-import { motion } from "motion/react";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { SunIcon, MoonIcon } from "@hugeicons/core-free-icons";
-
-function Page({ title, linkTo, linkLabel }) {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-rose-50">
-      <motion.h1
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex items-center gap-3 rounded-2xl bg-white px-8 py-4 text-3xl font-semibold text-slate-700 shadow-sm"
-      >
-        <HugeiconsIcon icon={SunIcon} size={28} />
-        {title}
-        <HugeiconsIcon icon={MoonIcon} size={28} />
-      </motion.h1>
-      <Link to={linkTo} className="text-slate-600 underline">
-        {linkLabel}
-      </Link>
-    </main>
-  );
-}
+const swatches = [
+  ["canvas", "bg-canvas"],
+  ["surface", "bg-surface"],
+  ["line", "bg-line"],
+  ["muted", "bg-muted"],
+  ["accent-soft", "bg-accent-soft"],
+  ["accent", "bg-accent"],
+  ["ink", "bg-ink"],
+];
 
 export default function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<Page title="Home" linkTo="/about" linkLabel="Go to About" />}
-      />
-      <Route
-        path="/about"
-        element={<Page title="About" linkTo="/" linkLabel="Back to Home" />}
-      />
-    </Routes>
+    <main className="mx-auto max-w-3xl px-6 py-16">
+      <h1 className="text-4xl font-semibold">Computer Science graduate</h1>
+      <p className="mt-3 text-muted">
+        Building software, exploring data, and learning about artificial
+        intelligence.
+      </p>
+
+      <div className="mt-10 grid grid-cols-4 gap-3 sm:grid-cols-7">
+        {swatches.map(([name, cls]) => (
+          <div key={name}>
+            <div className={`h-14 rounded-card border border-line ${cls}`} />
+            <p className="mt-2 text-xs text-muted">{name}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 rounded-card border border-line bg-surface p-6 shadow-soft transition hover:shadow-lift">
+        <h2 className="text-xl font-semibold">Sample card</h2>
+        <p className="mt-2 text-muted">Hover this card to see the shadow lift.</p>
+        <a href="#" className="mt-4 inline-block text-accent underline">
+          Sample link
+        </a>
+      </div>
+    </main>
   );
 }
