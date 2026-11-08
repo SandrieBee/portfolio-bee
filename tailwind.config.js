@@ -12,7 +12,8 @@ export default {
         accent: {
           soft: "#B7D0E6",
           DEFAULT: "#3F6C94",
-        },
+          dark: "#325775",
+      },
       },
       fontFamily: {
         sans: ['"Inter Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
