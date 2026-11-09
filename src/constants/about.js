@@ -6,7 +6,7 @@ export const ABOUT = {
   education: [
     {
       school: "Caraga State University, Main Campus",
-      detail: "Computer Science",
+      detail: "Bachelor of Science in Computer Science",
       period: "Graduated June 2026",
     },
   ],

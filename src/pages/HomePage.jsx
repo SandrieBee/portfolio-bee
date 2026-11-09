@@ -1,8 +1,8 @@
 import Hero from "../components/layout/Hero";
 import About from "../components/layout/About";
+import Skills from "../components/layout/Skills";
 
 const sections = [
-  "skills",
   "projects",
   "thesis",
   "certificates",
@@ -15,6 +15,7 @@ export default function HomePage() {
     <>
       <Hero />
       <About />
+      <Skills />
 
       {sections.map((id) => (
         <section

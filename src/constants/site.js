@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Your Name",
+  name: "Bea Sandara Abonales",
   title: "Computer Science Graduate",
   email: "you@example.com",
   github: "https://github.com/your-username",
