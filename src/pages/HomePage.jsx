@@ -2,8 +2,9 @@ import Hero from "../components/layout/Hero";
 import About from "../components/layout/About";
 import Skills from "../components/layout/Skills";
 import ProjectGallery from "../components/projects/ProjectGallery";
+import Thesis from "../components/layout/Thesis";
 
-const sections = ["thesis", "certificates", "experience", "contact"];
+const sections = ["certificates", "experience", "contact"];
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <About />
       <Skills />
       <ProjectGallery />
+      <Thesis />
 
       {sections.map((id) => (
         <section
