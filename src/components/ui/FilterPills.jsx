@@ -1,12 +1,8 @@
 import { cn } from "../../utils/cn";
 
-export default function ProjectFilter({ filters, active, onChange }) {
+export default function FilterPills({ label, filters, active, onChange }) {
   return (
-    <div
-      role="group"
-      aria-label="Filter projects by category"
-      className="flex flex-wrap gap-2"
-    >
+    <div role="group" aria-label={label} className="flex flex-wrap gap-2">
       {filters.map((filter) => {
         const isActive = active === filter.id;
         return (

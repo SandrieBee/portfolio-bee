@@ -3,8 +3,9 @@ import About from "../components/layout/About";
 import Skills from "../components/layout/Skills";
 import ProjectGallery from "../components/projects/ProjectGallery";
 import Thesis from "../components/layout/Thesis";
+import CertificateGallery from "../components/certificates/CertificateGallery";
 
-const sections = ["certificates", "experience", "contact"];
+const sections = ["experience", "contact"];
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Skills />
       <ProjectGallery />
       <Thesis />
+      <CertificateGallery />
 
       {sections.map((id) => (
         <section

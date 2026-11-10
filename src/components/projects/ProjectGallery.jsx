@@ -2,7 +2,7 @@ import { useState } from "react";
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
 import ProjectCard from "./ProjectCard";
-import ProjectFilter from "./ProjectFilter";
+import FilterPills from "../ui/FilterPills";
 import { PROJECTS, PROJECT_FILTERS } from "../../constants/projects";
 
 export default function ProjectGallery() {
@@ -25,7 +25,8 @@ export default function ProjectGallery() {
       />
 
       <Reveal className="mt-8">
-        <ProjectFilter
+        <FilterPills
+          label="Filter projects by category"
           filters={PROJECT_FILTERS}
           active={activeFilter}
           onChange={setActiveFilter}
