@@ -4,8 +4,7 @@ import Skills from "../components/layout/Skills";
 import ProjectGallery from "../components/projects/ProjectGallery";
 import Thesis from "../components/layout/Thesis";
 import CertificateGallery from "../components/certificates/CertificateGallery";
-
-const sections = ["contact"];
+import Contact from "../components/layout/Contact";
 
 export default function HomePage() {
   return (
@@ -16,17 +15,7 @@ export default function HomePage() {
       <ProjectGallery />
       <Thesis />
       <CertificateGallery />
-
-      {sections.map((id) => (
-        <section
-          key={id}
-          id={id}
-          className="mx-auto min-h-[70vh] max-w-6xl scroll-mt-20 px-6 py-16"
-        >
-          <h2 className="text-2xl font-semibold capitalize">{id}</h2>
-          <p className="mt-2 text-muted">Placeholder section.</p>
-        </section>
-      ))}
+      <Contact />
     </>
   );
 }
