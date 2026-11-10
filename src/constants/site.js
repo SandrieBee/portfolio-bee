@@ -15,6 +15,5 @@ export const NAV_LINKS = [
   { label: "Projects", href: "/#projects" },
   { label: "Thesis", href: "/#thesis" },
   { label: "Certificates", href: "/#certificates" },
-  { label: "Experience", href: "/#experience" },
   { label: "Contact", href: "/#contact" },
 ];

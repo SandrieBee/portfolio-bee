@@ -5,7 +5,7 @@ import ProjectGallery from "../components/projects/ProjectGallery";
 import Thesis from "../components/layout/Thesis";
 import CertificateGallery from "../components/certificates/CertificateGallery";
 
-const sections = ["experience", "contact"];
+const sections = ["contact"];
 
 export default function HomePage() {
   return (
