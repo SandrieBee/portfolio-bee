@@ -16,13 +16,8 @@ export default {
       },
       },
       fontFamily: {
-        sans: ['"Inter Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
-        heading: [
-          '"Plus Jakarta Sans Variable"',
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-        ],
+        sans: ['"DM Sans Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ['"Outfit Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
       borderRadius: {
         card: "1rem",

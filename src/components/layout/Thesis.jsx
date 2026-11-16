@@ -30,7 +30,7 @@ export default function Thesis() {
       id="thesis"
       className="scroll-mt-20 border-y border-line bg-surface/60"
     >
-      <div className="mx-auto max-w-6xl px-6 py-16 lg:py-24">
+      <div className="container-page py-10 sm:py-12 lg:py-10">
         <Reveal>
           <p className="text-sm font-medium text-accent">
             Featured undergraduate thesis
@@ -59,7 +59,7 @@ export default function Thesis() {
           )}
 
           {THESIS.links.length > 0 && (
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {THESIS.links.map((link) => (
                 <Button
                   key={link.href}
@@ -78,7 +78,7 @@ export default function Thesis() {
         </Reveal>
 
         {blocks.length > 0 && (
-          <ol className="mt-12 grid gap-4 md:grid-cols-2">
+          <ol className="mt-8 grid gap-4 md:grid-cols-2">
             {blocks.map((block, index) => (
               <li key={block.key}>
                 <Reveal delay={index * 0.05} className="h-full">

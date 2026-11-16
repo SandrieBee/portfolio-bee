@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Bea Sandara Abonales",
   title: "Computer Science Graduate",
-  email: "you@example.com",
-  github: "https://github.com/your-username",
-  linkedin: "https://www.linkedin.com/in/your-profile",
+  email: "beasandara.abonales16@gmail.com",
+  github: "https://github.com/SandrieBee",
+  linkedin: "https://www.linkedin.com/in/beaabonales16",
   intro:
     "I'm a Computer Science graduate with interests in software development, data analytics, and artificial intelligence. This portfolio brings together my projects, research, and certificates.",
   resumeUrl: "/resume.pdf",

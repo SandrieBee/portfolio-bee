@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
+      <div className="container-page flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted">
           &copy; {year} {SITE.name}. All rights reserved.
         </p>

@@ -21,7 +21,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-line bg-canvas/95">
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        className="container-page flex items-center justify-between py-4"
       >
         <Link
           to="/"
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {open && (
         <div id="mobile-menu" className="border-t border-line bg-canvas lg:hidden">
-          <ul className="mx-auto max-w-6xl space-y-1 px-6 py-4">
+          <ul className="container-page space-y-1 py-4">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link

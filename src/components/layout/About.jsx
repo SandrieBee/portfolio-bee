@@ -11,7 +11,7 @@ function InfoCard({ title, children }) {
     <Reveal>
       <Card>
         <h3 className="text-lg font-semibold">{title}</h3>
-        <div className="mt-4 space-y-4">{children}</div>
+        <div className="mt-3 space-y-3">{children}</div>
       </Card>
     </Reveal>
   );
@@ -21,14 +21,11 @@ export default function About() {
   const { paragraphs, education, internships, focusAreas } = ABOUT;
 
   return (
-    <section
-      id="about"
-      className="mx-auto max-w-6xl scroll-mt-20 px-6 py-16 lg:py-24"
-    >
+    <section id="about" className="section">
       <SectionHeading eyebrow="Introduction" title="About me" />
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-5">
-        <Reveal className="space-y-4 lg:col-span-3">
+      <div className="mt-8 grid gap-8 lg:grid-cols-5">
+        <Reveal className="max-w-3xl space-y-4 lg:col-span-3">
           {paragraphs.map((text) => (
             <p key={text} className="text-lg text-muted">
               {text}

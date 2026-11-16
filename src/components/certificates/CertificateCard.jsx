@@ -4,12 +4,14 @@ import { certificateDate } from "../../utils/formatDate";
 import { CERTIFICATE_CATEGORY_LABELS } from "../../constants/certificates";
 
 export default function CertificateCard({ certificate, onOpen }) {
-    const { title, issuer, hours, category, imageUrl } = certificate;
+  const { title, issuer, hours, category, imageUrl } = certificate;
+
   return (
     <Card
       as="article"
       interactive
-      className="flex h-full flex-col overflow-hidden p-0"
+      flush
+      className="flex h-full flex-col overflow-hidden"
     >
       {imageUrl ? (
         <img
@@ -25,18 +27,18 @@ export default function CertificateCard({ certificate, onOpen }) {
         />
       )}
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5">
         <p className="text-xs font-medium text-accent">
           {CERTIFICATE_CATEGORY_LABELS[category]}
         </p>
         <h3 className="mt-2 text-lg font-semibold">{title}</h3>
         <p className="mt-1 text-sm text-muted">{issuer}</p>
         <p className="mt-1 text-sm text-muted">
-            {certificateDate(certificate)}
+          {certificateDate(certificate)}
           {hours ? ` | ${hours} hours` : ""}
         </p>
 
-        <div className="mt-auto pt-6">
+        <div className="mt-auto pt-4">
           <Button variant="secondary" onClick={() => onOpen(certificate)}>
             View certificate
           </Button>

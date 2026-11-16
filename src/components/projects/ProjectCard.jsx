@@ -33,7 +33,8 @@ export default function ProjectCard({ project }) {
     <Card
       as="article"
       interactive
-      className="flex h-full flex-col overflow-hidden p-0"
+      flush
+      className="flex h-full flex-col overflow-hidden"
     >
       {thumbnail ? (
         <img
@@ -49,7 +50,7 @@ export default function ProjectCard({ project }) {
         />
       )}
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5">
         <ul className="flex flex-wrap gap-2" aria-label="Categories">
           {categories.map((id) => (
             <li key={id}>
@@ -73,7 +74,7 @@ export default function ProjectCard({ project }) {
         )}
 
         {primary && (
-          <div className="mt-auto flex flex-wrap items-center gap-4 pt-6">
+          <div className="mt-auto flex flex-wrap items-center gap-4 pt-4">
             <Button
               as="a"
               href={primary.href}

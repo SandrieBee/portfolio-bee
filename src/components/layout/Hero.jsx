@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24"
+      className="container-page grid items-center gap-8 py-8 lg:grid-cols-2 lg:gap-12 lg:py-8"
     >
       <motion.div
         initial={{ opacity: 0, y: 16 }}
@@ -25,9 +25,9 @@ export default function Hero() {
         <h1 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
           {SITE.name}
         </h1>
-        <p className="mt-5 max-w-xl text-lg text-muted">{SITE.intro}</p>
+        <p className="mt-4 max-w-2xl text-lg text-muted">{SITE.intro}</p>
 
-        <ul className="mt-6 flex flex-wrap gap-2" aria-label="Areas of interest">
+        <ul className="mt-5 flex flex-wrap gap-2" aria-label="Areas of interest">
           {INTERESTS.map((interest) => (
             <li key={interest}>
               <Badge variant="accent">{interest}</Badge>
@@ -35,7 +35,7 @@ export default function Hero() {
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3">
           <Button as={Link} to="/#projects" size="lg">
             Explore My Work
           </Button>
@@ -57,7 +57,7 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="relative mx-auto aspect-square w-full max-w-sm"
+        className="relative mx-auto hidden aspect-square w-full max-w-md lg:ml-auto lg:mr-0 lg:block"
       >
         <div className="absolute inset-0 rounded-[2rem] border border-line bg-surface/60 bg-[radial-gradient(theme(colors.line)_1.5px,transparent_1.5px)] [background-size:22px_22px]" />
         <div className="absolute left-8 top-8 h-40 w-40 rounded-3xl bg-accent-soft/60" />
