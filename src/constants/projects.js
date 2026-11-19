@@ -51,18 +51,6 @@ export const PROJECTS = [
     liveUrl: null,
     thumbnail: null,
   },
-   {
-    slug: "appointhub",
-    title: "AppointHub",
-    role: "Technical Documenter",
-    description: "",
-    technologies: [],
-    categories: ["academic", "web"],
-    year: null,
-    githubUrl: "https://github.com/owner-name/repo-name",
-    liveUrl: null,
-    thumbnail: null,
-  },
   {
     slug: "luma-programming-language",
     title: "LUMA Programming Language",

@@ -12,14 +12,45 @@ export const CERTIFICATE_CATEGORY_LABELS = Object.fromEntries(
   CERTIFICATE_FILTERS.filter((f) => f.id !== "all").map((f) => [f.id, f.label]),
 );
 
-// Temporary data until the Supabase phase. Empty fields are hidden.
-// PLEASE VERIFY every entry below and delete any that are wrong.
 export const CERTIFICATES = [
+  {
+    id: "bits-and-bytes-of-computer-networking",
+    title: "The Bits and Bytes of Computer Networking",
+    issuer: "Google (via Coursera)",
+    issuedDate: "2026-10-12",
+    hours: null,
+    description: "",
+    category: "cybersecurity",
+    imageUrl: null,
+    certificateUrl: "https://coursera.org/verify/UCW91XQ588O9",
+  },
+  {
+    id: "technical-support-fundamentals",
+    title: "Technical Support Fundamentals",
+    issuer: "Google (via Coursera)",
+    issuedDate: "2026-10-06",
+    hours: null,
+    description: "",
+    category: "other",
+    imageUrl: null,
+    certificateUrl: "https://coursera.org/verify/PJW70LO5WOCG",
+  },
   {
     id: "data-science-job-simulation",
     title: "Data Science Job Simulation",
     issuer: "British Airways (via Forage)",
     issuedDate: "2026-08-05",
+    hours: null,
+    description: "",
+    category: "data-science",
+    imageUrl: null,
+    certificateUrl: null,
+  },
+  {
+    id: "data-analytics-essentials",
+    title: "Data Analytics Essentials",
+    issuer: "Cisco Networking Academy",
+    issuedDate: "2026-06-08",
     hours: null,
     description: "",
     category: "data-science",
@@ -38,18 +69,6 @@ export const CERTIFICATES = [
     certificateUrl: null,
   },
   {
-    id: "data-analytics-essentials",
-    title: "Data Analytics Essentials",
-    issuer: "Cisco Networking Academy",
-    issuedDate: "2026-06-08",
-    hours: null,
-    description: "",
-    category: "data-science",
-    imageUrl: null,
-    certificateUrl: null,
-  },
-
-{
     id: "devfest-2025-participation",
     title: "DevFest 2025 Certificate of Participation",
     issuer: "Google Developer Group - Cagayan de Oro",
@@ -60,6 +79,17 @@ export const CERTIFICATES = [
     category: "seminars",
     imageUrl: "/certificates/devfest-2025.png",
     certificateUrl: null,
-},
+  },
 
+    {
+    id: "introduction-to-ai-in-azure",
+    title: "Introduction to AI in Azure",
+    issuer: "BlackStride Cyber",
+    issuedDate: "2026-08-14",
+    hours: 1.5,
+    description: "Certificate of Attendance for the 1.5-hour BlackStride Cyber Webinar.",
+    category: "seminars",
+    imageUrl: null,
+    certificateUrl: null,
+  },
 ];
