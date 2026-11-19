@@ -1,11 +1,12 @@
-// TEMPORARY: simulates sending. In Phase 7 this becomes a Supabase insert.
-export async function sendContactMessage(values) {
-  await new Promise((resolve) => setTimeout(resolve, 800));
+import { supabase } from "../lib/supabaseClient";
 
-  // For testing the error state: use "test error" as the subject.
-  if (values.subject.trim().toLowerCase() === "test error") {
-    throw new Error("Simulated failure");
-  }
+export async function sendContactMessage({ name, email, subject, message }) {
+  const { error } = await supabase.from("contact_messages").insert({
+    name: name.trim(),
+    email: email.trim(),
+    subject: subject.trim(),
+    message: message.trim(),
+  });
 
-  return { ok: true };
+  if (error) throw error;
 }
