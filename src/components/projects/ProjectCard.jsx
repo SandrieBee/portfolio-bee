@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import Badge from "../ui/Badge";
 import Card from "../ui/Card";
+import ImageSlideshow from "../ui/ImageSlideshow";
 import { CATEGORY_LABELS } from "../../constants/projects";
 
 const linkClass =
@@ -16,7 +17,7 @@ export default function ProjectCard({ project }) {
     year,
     githubUrl,
     liveUrl,
-    thumbnail,
+    images,
   } = project;
 
   const meta = [role, year].filter(Boolean).join(" | ");
@@ -36,19 +37,7 @@ export default function ProjectCard({ project }) {
       flush
       className="flex h-full flex-col overflow-hidden"
     >
-      {thumbnail ? (
-        <img
-          src={thumbnail}
-          alt={`${title} preview`}
-          loading="lazy"
-          className="aspect-video w-full object-cover"
-        />
-      ) : (
-        <div
-          aria-hidden="true"
-          className="aspect-video w-full border-b border-line bg-surface bg-[radial-gradient(#DEE0E4_1.5px,transparent_1.5px)] [background-size:22px_22px]"
-        />
-      )}
+      <ImageSlideshow images={images} title={title} />
 
       <div className="flex flex-1 flex-col p-5">
         <ul className="flex flex-wrap gap-2" aria-label="Categories">
