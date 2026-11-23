@@ -61,7 +61,7 @@ This is my personal portfolio. Please don't copy or reuse its code, design, text
 ## Contact
 
 **Bea Sandara Abonales**
-Computer Science graduate, Caraga State University
+Computer Science graduate
 
 - GitHub: https://github.com/SandrieBee
 - LinkedIn: https://www.linkedin.com/in/beaabonales16
