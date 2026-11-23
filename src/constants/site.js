@@ -6,7 +6,8 @@ export const SITE = {
   linkedin: "https://www.linkedin.com/in/beaabonales16",
   intro:
     "I'm a Computer Science graduate with interests in software development, data analytics, and artificial intelligence. This portfolio brings together my projects, research, and certificates.",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "https://xnnwncuyltkxhqwjqiuw.supabase.co/storage/v1/object/public/documents/Resume.pdf",
+  photoUrl: "https://xnnwncuyltkxhqwjqiuw.supabase.co/storage/v1/object/public/project-images/profile.png",
 };
 
 export const NAV_LINKS = [

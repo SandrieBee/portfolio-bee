@@ -4,8 +4,6 @@ import Button from "../ui/Button";
 import Badge from "../ui/Badge";
 import { SITE } from "../../constants/site";
 
-const PHOTO_URL = "./public/profile.png";
-
 const INTERESTS = [
   "Software Development",
   "Data Analytics",
@@ -122,7 +120,7 @@ export default function Hero() {
           className="relative"
         >
           <img
-            src={PHOTO_URL}
+            src={SITE.photoUrl}
             alt={`Portrait of ${SITE.name}`}
             width="1000"
             height="1000"
