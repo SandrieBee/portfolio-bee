@@ -12,9 +12,9 @@ import { cn } from "../../utils/cn";
 const FRAME = "aspect-video w-full border-b border-line bg-surface";
 
 const controlClass =
-  "flex h-8 w-8 items-center justify-center rounded-full border border-line bg-white/90 text-ink shadow-soft transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
+  "flex h-8 w-8 items-center justify-center rounded-full border border-line bg-card/90 text-ink shadow-soft transition-colors hover:bg-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 
-
+// Arrows appear on hover or focus for mouse users.
 // On touch devices they stay visible.
 const revealOnHover =
   "transition-opacity [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-focus-within:opacity-100";
@@ -66,7 +66,7 @@ export default function ImageSlideshow({ images, title, intervalMs = 5000 }) {
         aria-hidden="true"
         className={cn(
           FRAME,
-          "bg-[radial-gradient(#DEE0E4_1.5px,transparent_1.5px)] [background-size:22px_22px]",
+          "bg-[radial-gradient(rgb(var(--color-line))_1.5px,transparent_1.5px)] [background-size:22px_22px]",
         )}
       />
     );
@@ -155,7 +155,7 @@ export default function ImageSlideshow({ images, title, intervalMs = 5000 }) {
         </button>
       )}
 
-      <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center rounded-full border border-line bg-white/90 px-1 shadow-soft">
+      <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center rounded-full border border-line bg-card/90 px-1 shadow-soft">
         {images.map((image, i) => (
           <button
             key={image.url}

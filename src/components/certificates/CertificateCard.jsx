@@ -23,7 +23,7 @@ export default function CertificateCard({ certificate, onOpen }) {
       ) : (
         <div
           aria-hidden="true"
-          className="aspect-[4/3] w-full border-b border-line bg-surface bg-[radial-gradient(#DEE0E4_1.5px,transparent_1.5px)] [background-size:22px_22px]"
+          className="aspect-[4/3] w-full border-b border-line bg-surface bg-[radial-gradient(rgb(var(--color-line))_1.5px,transparent_1.5px)] [background-size:22px_22px]"
         />
       )}
 

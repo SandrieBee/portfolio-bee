@@ -31,7 +31,7 @@ export default function CertificateModal({ certificate, onClose }) {
       onClick={(event) => {
         if (event.target === dialogRef.current) onClose();
       }}
-      className="m-auto max-h-[90vh] w-[min(92vw,56rem)] overflow-auto rounded-card border border-line bg-white p-0 shadow-lift backdrop:bg-ink/50"
+      className="m-auto max-h-[90vh] w-[min(92vw,56rem)] overflow-auto rounded-card border border-line bg-card p-0 text-ink shadow-lift backdrop:bg-scrim/50"
     >
       {certificate && (
         <div className="p-6 sm:p-8">

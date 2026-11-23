@@ -4,8 +4,8 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas disabled:pointer-events-none disabled:opacity-50";
 
 const variants = {
-  primary: "bg-accent text-white hover:bg-accent-dark",
-  secondary: "border border-line bg-white text-ink hover:bg-surface",
+  primary: "bg-accent text-on-accent hover:bg-accent-dark",
+  secondary: "border border-line bg-card text-ink hover:bg-surface",
   ghost: "text-accent hover:bg-accent-soft/30",
 };
 

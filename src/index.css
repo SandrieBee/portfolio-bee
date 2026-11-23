@@ -3,6 +3,69 @@
 @tailwind utilities;
 
 @layer base {
+  /* LIGHT (default). Values are RGB channels. */
+  :root {
+    color-scheme: light;
+    --color-canvas: 250 250 251;
+    --color-surface: 241 242 244;
+    --color-card: 255 255 255;
+    --color-line: 222 224 228;
+    --color-ink: 35 38 43;
+    --color-muted: 100 106 114;
+    --color-scrim: 35 38 43;
+    --color-accent: 63 108 148;
+    --color-accent-soft: 183 208 230;
+    --color-accent-dark: 50 87 117;
+    --color-on-accent: 255 255 255;
+    --color-success-soft: 236 253 245;
+    --color-success-ink: 6 95 70;
+    --color-danger-soft: 254 242 242;
+    --color-danger-ink: 185 28 28;
+    --shadow-color: 35 38 43;
+  }
+
+  /* NIGHT */
+  :root[data-theme="night"] {
+    color-scheme: dark;
+    --color-canvas: 16 19 24;
+    --color-surface: 23 27 33;
+    --color-card: 28 33 40;
+    --color-line: 43 50 60;
+    --color-ink: 231 234 238;
+    --color-muted: 155 163 174;
+    --color-scrim: 0 0 0;
+    --color-accent: 141 184 224;
+    --color-accent-soft: 43 64 87;
+    --color-accent-dark: 169 203 234;
+    --color-on-accent: 14 19 25;
+    --color-success-soft: 15 42 34;
+    --color-success-ink: 110 231 183;
+    --color-danger-soft: 45 21 23;
+    --color-danger-ink: 252 165 165;
+    --shadow-color: 0 0 0;
+  }
+
+  /* PINK (a light theme with pale blush accents) */
+  :root[data-theme="pink"] {
+    color-scheme: light;
+    --color-canvas: 255 248 250;
+    --color-surface: 252 238 242;
+    --color-card: 255 255 255;
+    --color-line: 240 217 225;
+    --color-ink: 43 35 39;
+    --color-muted: 110 90 99;
+    --color-scrim: 43 35 39;
+    --color-accent: 176 71 110;
+    --color-accent-soft: 246 201 216;
+    --color-accent-dark: 142 53 86;
+    --color-on-accent: 255 255 255;
+    --color-success-soft: 236 253 245;
+    --color-success-ink: 6 95 70;
+    --color-danger-soft: 254 242 242;
+    --color-danger-ink: 185 28 28;
+    --shadow-color: 110 40 70;
+  }
+
   html {
     scroll-behavior: smooth;
   }

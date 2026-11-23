@@ -27,7 +27,7 @@ function ContactLink({ icon, label, value, href, external = false }) {
     <a
       href={href}
       {...externalProps}
-      className="group flex items-center gap-4 rounded-card border border-line bg-white p-4 shadow-soft transition duration-200 hover:border-accent-soft hover:shadow-lift focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent motion-reduce:transition-none"
+      className="group flex items-center gap-4 rounded-card border border-line bg-card p-4 shadow-soft transition duration-200 hover:border-accent-soft hover:shadow-lift focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent motion-reduce:transition-none"
     >
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft/40 text-accent-dark">
         <HugeiconsIcon icon={icon} size={22} />
@@ -206,7 +206,7 @@ export default function Contact() {
                 {status === "success" && (
                   <p
                     role="status"
-                    className="rounded-lg bg-emerald-50 px-3 py-2 text-sm text-emerald-800"
+                    className="rounded-lg bg-success-soft px-3 py-2 text-sm text-success-ink"
                   >
                     Thank you. Your message has been sent.
                   </p>
@@ -214,7 +214,7 @@ export default function Contact() {
                 {status === "error" && (
                   <p
                     role="alert"
-                    className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-800"
+                    className="rounded-lg bg-danger-soft px-3 py-2 text-sm text-danger-ink"
                   >
                     Something went wrong. Please try again, or email me directly.
                   </p>

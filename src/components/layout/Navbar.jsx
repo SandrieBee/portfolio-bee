@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { MenuIcon, CancelIcon } from "@hugeicons/core-free-icons";
 import { NAV_LINKS, SITE } from "../../constants/site";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -34,29 +35,33 @@ export default function Navbar() {
           {SITE.name}
         </Link>
 
-        <ul className="hidden items-center gap-1 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                to={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-ink"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-1">
+          <ul className="hidden items-center gap-1 lg:flex">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  to={link.href}
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-ink"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        <button
-          type="button"
-          className="rounded-lg p-2 text-ink transition-colors hover:bg-surface lg:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen(!open)}
-        >
-          <HugeiconsIcon icon={open ? CancelIcon : MenuIcon} size={24} />
-        </button>
+          <ThemeSwitcher />
+
+          <button
+            type="button"
+            className="rounded-lg p-2 text-ink transition-colors hover:bg-surface lg:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen(!open)}
+          >
+            <HugeiconsIcon icon={open ? CancelIcon : MenuIcon} size={24} />
+          </button>
+        </div>
       </nav>
 
       {open && (

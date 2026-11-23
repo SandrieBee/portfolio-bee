@@ -5,6 +5,30 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>final-portfolio</title>
+
+        <script>
+      // Applies the saved theme before the first paint, so there is no flash.
+      // Keep this in sync with src/utils/theme.js.
+      (function () {
+        var preference = "auto";
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          if (["light", "night", "pink", "auto"].indexOf(stored) !== -1) {
+            preference = stored;
+          }
+        } catch (e) {}
+        var theme = preference;
+        if (preference === "auto") {
+          theme =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "night"
+              : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    
   </head>
   <body>
     <div id="root"></div>
